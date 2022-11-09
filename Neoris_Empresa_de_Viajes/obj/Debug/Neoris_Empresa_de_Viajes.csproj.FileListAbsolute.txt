@@ -1,0 +1,15 @@
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.csproj.AssemblyReference.cache
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.frmClientes.resources
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.frmDashboard.resources
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.frmFacturas.resources
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.frmLogin.resources
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.frmPaquetes.resources
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.frmPrincipal.resources
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.Properties.Resources.resources
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.csproj.GenerateResource.cache
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.csproj.CoreCompileInputs.cache
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\bin\Debug\Neoris_Empresa_de_Viajes.exe.config
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\bin\Debug\Neoris_Empresa_de_Viajes.exe
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\bin\Debug\Neoris_Empresa_de_Viajes.pdb
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.exe
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.pdb
