@@ -13,3 +13,6 @@ C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Via
 C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\bin\Debug\Neoris_Empresa_de_Viajes.pdb
 C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.exe
 C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.pdb
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\bin\Debug\Dapper.dll
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\bin\Debug\Dapper.xml
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Neoris_Empresa_de_Viajes\obj\Debug\Neoris_Empresa_de_Viajes.csproj.CopyComplete

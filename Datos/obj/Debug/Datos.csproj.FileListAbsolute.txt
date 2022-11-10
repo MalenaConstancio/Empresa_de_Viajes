@@ -1,0 +1,11 @@
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\bin\Debug\Datos.dll
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\bin\Debug\Datos.pdb
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\bin\Debug\Dapper.dll
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\bin\Debug\Dapper.xml
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\obj\Debug\Datos.dll
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\obj\Debug\Datos.pdb
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\bin\Debug\Entidades.dll
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\bin\Debug\Entidades.pdb
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache

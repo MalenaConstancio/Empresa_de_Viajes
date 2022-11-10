@@ -1,0 +1,9 @@
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\INegocio\bin\Debug\INegocio.dll
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\INegocio\bin\Debug\INegocio.pdb
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\INegocio\bin\Debug\Dapper.dll
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\INegocio\bin\Debug\Dapper.xml
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\INegocio\obj\Debug\INegocio.csproj.AssemblyReference.cache
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\INegocio\obj\Debug\INegocio.csproj.CoreCompileInputs.cache
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\INegocio\obj\Debug\INegocio.csproj.CopyComplete
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\INegocio\obj\Debug\INegocio.dll
+C:\Users\-MSI-\Desktop\NEORIS.NET\Neoris_Empresa_de_Viajes\INegocio\obj\Debug\INegocio.pdb

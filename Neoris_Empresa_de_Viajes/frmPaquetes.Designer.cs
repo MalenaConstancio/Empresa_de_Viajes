@@ -29,22 +29,9 @@ namespace Neoris_Empresa_de_Viajes
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Coral;
-            this.btnSalir.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(526, 12);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(35, 36);
-            this.btnSalir.TabIndex = 8;
-            this.btnSalir.Text = "X";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label1
             // 
@@ -57,14 +44,27 @@ namespace Neoris_Empresa_de_Viajes
             this.label1.TabIndex = 11;
             this.label1.Text = "PAQUETES";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Coral;
+            this.btnSalir.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(541, 12);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.TabIndex = 12;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = false;
+          
+            // 
             // frmPaquetes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 504);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.label1);
             this.Name = "frmPaquetes";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -72,8 +72,7 @@ namespace Neoris_Empresa_de_Viajes
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

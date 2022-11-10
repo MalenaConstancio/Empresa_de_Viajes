@@ -21,5 +21,7 @@ namespace Neoris_Empresa_de_Viajes
         {
             this.Dispose();
         }
+
+       
     }
 }
