@@ -44,9 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteDao.cs" />
+    <Compile Include="Implementaciones\ClienteDao.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="IClienteDao.cs" />
+    <Compile Include="Interfaces\IClienteDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

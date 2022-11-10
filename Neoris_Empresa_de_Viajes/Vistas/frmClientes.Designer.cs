@@ -84,6 +84,7 @@ namespace Neoris_Empresa_de_Viajes
             this.btnSalir.TabIndex = 12;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // gbxDatosCliente
             // 

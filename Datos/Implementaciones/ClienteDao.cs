@@ -32,8 +32,16 @@ namespace Datos
             cmd.Parameters.AddWithValue("@ApellidoCliente", oCliente.Apellido);
             cmd.Parameters.AddWithValue("@Nacionalidad", oCliente.Nacionalidad);
             cmd.Parameters.AddWithValue("@Dni", oCliente.Dni);
-            cmd.Parameters.AddWithValue("@Cuit", oCliente.Cuit);
-            cmd.Parameters.AddWithValue("@RazonSocial", oCliente.RazonSocial);
+            if (oCliente.Cuit == 0)
+            {
+                cmd.Parameters.AddWithValue("@Cuit", DBNull.Value);
+                cmd.Parameters.AddWithValue("@RazonSocial", DBNull.Value);
+            }
+            else {
+                cmd.Parameters.AddWithValue("@Cuit", oCliente.Cuit);
+                cmd.Parameters.AddWithValue("@RazonSocial", oCliente.RazonSocial);
+            }
+           
 
         }
 

@@ -44,8 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteNegocio.cs" />
-    <Compile Include="IClienteNegocio.cs" />
+    <Compile Include="Implementaciones\ClienteNegocio.cs" />
+    <Compile Include="Interfaces\IClienteNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

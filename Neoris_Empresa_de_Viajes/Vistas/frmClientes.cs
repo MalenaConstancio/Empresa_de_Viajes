@@ -26,14 +26,19 @@ namespace Neoris_Empresa_de_Viajes
             InitializeComponent();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
+
+        private void limpiarCampos() {
+
+            txtAltura.Text = "";
+            txtApellido.Text = "";
+            txtCalle.Text = "";
+            txtCuit.Text = "";
+            txtDni.Text = "";
+            txtNacionalidad.Text = "";
+            txtNombre.Text = "";
+            txtRazonSocial.Text = "";
+            txtTelefono.Text = "";
         }
-
-
-
-
 
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -48,32 +53,32 @@ namespace Neoris_Empresa_de_Viajes
             oCliente.NroCalle=Convert.ToInt32(txtAltura.Text);
 
             Ciudad oCiudad = new Ciudad();
-            oCiudad.IdCiudad= (int)cbCiudad.SelectedItem;
-            oCiudad.IdProvincia= (int)cbProvincia.SelectedItem;
-            oCiudad.IdPais = (int)cbPais.SelectedItem;
+            oCiudad.IdCiudad= (int)cbCiudad.SelectedValue;
+            oCiudad.IdProvincia= (int)cbProvincia.SelectedValue;
+            oCiudad.IdPais = (int)cbPais.SelectedValue;
             oCliente.Ciudad=oCiudad;
 
             if (txtCuit.Text == "") { 
                 oCliente.IdTipoCliente= 1;
             }
-            if (txtDni.Text == "")
+            if (txtCuit.Text != "")
             {
                 oCliente.IdTipoCliente = 2;
+                oCliente.Cuit = Convert.ToInt64(txtCuit.Text);
             }
             oCliente.RazonSocial = txtRazonSocial.Text;
-            oCliente.Cuit= Convert.ToInt64(txtCuit.Text);
             oCliente.Dni= Convert.ToInt64(txtDni.Text);
-
 
             int filasAfectadas = cneg.insertCliente(oCliente);
 
-            if (filasAfectadas > 0)
+            if (filasAfectadas == 0)
             {
-                lblMensaje.Text = "Se agrego Cliente con exito!";
+                lblMensaje.Text = "No se pudo agregar Cliente!" ;
             }
             else {
 
-                lblMensaje.Text = "No se pudo agregar Cliente!";
+                lblMensaje.Text = "Se agrego Cliente con exito!";
+                limpiarCampos();
             }
 
 
@@ -81,16 +86,34 @@ namespace Neoris_Empresa_de_Viajes
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            limpiarCampos();
         }
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM Paises";
-            DataTable paises = cneg.ObtenerTabla("Paises",query);
+            string queryPaises = "SELECT * FROM Paises";
+            DataTable paises = cneg.ObtenerTabla("Paises", queryPaises);
                 cbPais.DataSource = paises;
                 cbPais.ValueMember = paises.Columns[0].ToString();
                 cbPais.DisplayMember = paises.Columns[1].ToString();
+
+            string queryCiudades = "SELECT * FROM Ciudades";
+            DataTable ciudades = cneg.ObtenerTabla("Ciudades", queryCiudades);
+            cbCiudad.DataSource = ciudades;
+            cbCiudad.ValueMember = ciudades.Columns[0].ToString();
+            cbCiudad.DisplayMember = ciudades.Columns[1].ToString();
+
+            string queryProvincias = "SELECT * FROM Provincias";
+            DataTable provincias = cneg.ObtenerTabla("Provincias", queryProvincias);
+            cbProvincia.DataSource = provincias;
+            cbProvincia.ValueMember = provincias.Columns[0].ToString();
+            cbProvincia.DisplayMember = provincias.Columns[1].ToString();
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

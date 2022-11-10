@@ -49,60 +49,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmClientes.cs">
+    <Compile Include="Vistas\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClientes.Designer.cs">
+    <Compile Include="Vistas\frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDashboard.cs">
+    <Compile Include="Vistas\frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDashboard.Designer.cs">
+    <Compile Include="Vistas\frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmFacturas.cs">
+    <Compile Include="Vistas\frmFacturas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFacturas.Designer.cs">
+    <Compile Include="Vistas\frmFacturas.Designer.cs">
       <DependentUpon>frmFacturas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Vistas\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Vistas\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPaquetes.cs">
+    <Compile Include="Vistas\frmPaquetes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPaquetes.Designer.cs">
+    <Compile Include="Vistas\frmPaquetes.Designer.cs">
       <DependentUpon>frmPaquetes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="Vistas\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
+    <Compile Include="Vistas\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmClientes.resx">
+    <EmbeddedResource Include="Vistas\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDashboard.resx">
+    <EmbeddedResource Include="Vistas\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFacturas.resx">
+    <EmbeddedResource Include="Vistas\frmFacturas.resx">
       <DependentUpon>frmFacturas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Vistas\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPaquetes.resx">
+    <EmbeddedResource Include="Vistas\frmPaquetes.resx">
       <DependentUpon>frmPaquetes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
+    <EmbeddedResource Include="Vistas\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

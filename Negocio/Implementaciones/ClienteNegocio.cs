@@ -14,12 +14,9 @@ namespace Negocio
         ClienteDao cdao = new ClienteDao();
         public int insertCliente(Cliente oCliente)
         {
-            
-            
             int filasAfectadas=cdao.insertCliente(oCliente);
 
             return filasAfectadas;
-
         }
 
         public DataTable ObtenerTabla(string nombreTabla, string query)
