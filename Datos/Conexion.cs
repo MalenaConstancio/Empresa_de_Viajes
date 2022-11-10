@@ -65,16 +65,18 @@ namespace Datos
             return ds.Tables[nombreTabla];
         }
 
-        public Boolean existe(String consulta)
+        public Boolean existe(String query)
         {
             Boolean estado = false;
             SqlConnection Conexion = ObtenerConexion();
-            SqlCommand cmd = new SqlCommand(consulta, Conexion);
+            SqlCommand cmd = new SqlCommand(query, Conexion);
             SqlDataReader datos = cmd.ExecuteReader();
             if (datos.Read())
             {
                 estado = true;
             }
+
+            Conexion.Close();
             return estado;
         }
 

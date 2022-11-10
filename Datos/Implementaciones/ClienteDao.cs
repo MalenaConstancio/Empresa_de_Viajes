@@ -23,6 +23,7 @@ namespace Datos
         }
 
         private void armarParametrosInsertCliente(ref SqlCommand cmd, Cliente oCliente) {
+
             cmd.Parameters.AddWithValue("@IdCiudad", oCliente.Ciudad.IdCiudad);
             cmd.Parameters.AddWithValue("@Calle", oCliente.Calle);
             cmd.Parameters.AddWithValue("@NroCalle", oCliente.NroCalle);
@@ -49,6 +50,14 @@ namespace Datos
             Conexion cnn = new Conexion();
             DataTable tabla= cnn.ObtenerTabla(nombreTabla, query);
             return tabla;
+        }
+
+        public Boolean existe(String query) {
+            Conexion cnn = new Conexion();
+            if (cnn.existe(query)) {
+                return true;
+            }
+            return false;
         }
 
     }

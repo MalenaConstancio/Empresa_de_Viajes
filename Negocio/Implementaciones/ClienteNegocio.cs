@@ -12,6 +12,15 @@ namespace Negocio
     public class ClienteNegocio : IClienteNegocio
     {
         ClienteDao cdao = new ClienteDao();
+
+        public bool existe(string query)
+        {
+            if (cdao.existe(query)) {
+                return true;
+            }
+            return false;
+        }
+
         public int insertCliente(Cliente oCliente)
         {
             int filasAfectadas=cdao.insertCliente(oCliente);

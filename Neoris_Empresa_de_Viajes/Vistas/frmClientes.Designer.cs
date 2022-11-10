@@ -58,7 +58,6 @@ namespace Neoris_Empresa_de_Viajes
             this.labela = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblMensaje = new System.Windows.Forms.Label();
             this.gbxDatosCliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,6 +128,7 @@ namespace Neoris_Empresa_de_Viajes
             this.txtNacionalidad.Name = "txtNacionalidad";
             this.txtNacionalidad.Size = new System.Drawing.Size(100, 23);
             this.txtNacionalidad.TabIndex = 27;
+            this.txtNacionalidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloLetras_KeyPress);
             // 
             // cbPais
             // 
@@ -177,6 +177,7 @@ namespace Neoris_Empresa_de_Viajes
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.Size = new System.Drawing.Size(100, 23);
             this.txtCuit.TabIndex = 22;
+            this.txtCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumeros_KeyPress);
             // 
             // txtAltura
             // 
@@ -184,6 +185,7 @@ namespace Neoris_Empresa_de_Viajes
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(100, 23);
             this.txtAltura.TabIndex = 21;
+            this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumeros_KeyPress);
             // 
             // txtCalle
             // 
@@ -250,6 +252,7 @@ namespace Neoris_Empresa_de_Viajes
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 23);
             this.txtTelefono.TabIndex = 13;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumeros_KeyPress);
             // 
             // label7
             // 
@@ -275,6 +278,7 @@ namespace Neoris_Empresa_de_Viajes
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(100, 23);
             this.txtRazonSocial.TabIndex = 9;
+            this.txtRazonSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloLetras_KeyPress);
             // 
             // label5
             // 
@@ -291,6 +295,7 @@ namespace Neoris_Empresa_de_Viajes
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 23);
             this.txtDni.TabIndex = 7;
+            this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumeros_KeyPress);
             // 
             // label4
             // 
@@ -316,6 +321,7 @@ namespace Neoris_Empresa_de_Viajes
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 23);
             this.txtApellido.TabIndex = 4;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloLetras_KeyPress);
             // 
             // labela
             // 
@@ -332,6 +338,7 @@ namespace Neoris_Empresa_de_Viajes
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 23);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloLetras_KeyPress);
             // 
             // label2
             // 
@@ -342,17 +349,6 @@ namespace Neoris_Empresa_de_Viajes
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre :";
             // 
-            // lblMensaje
-            // 
-            this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.ForeColor = System.Drawing.Color.DimGray;
-            this.lblMensaje.Location = new System.Drawing.Point(163, 297);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(237, 16);
-            this.lblMensaje.TabIndex = 14;
-            this.lblMensaje.Text = "aca va el mensaje de confirmación";
-            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,7 +356,6 @@ namespace Neoris_Empresa_de_Viajes
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(573, 504);
             this.ControlBox = false;
-            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.gbxDatosCliente);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label1);
@@ -403,6 +398,5 @@ namespace Neoris_Empresa_de_Viajes
         private System.Windows.Forms.ComboBox cbPais;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtNacionalidad;
-        private System.Windows.Forms.Label lblMensaje;
     }
 }

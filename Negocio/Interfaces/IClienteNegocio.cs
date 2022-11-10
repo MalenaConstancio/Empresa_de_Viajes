@@ -12,5 +12,7 @@ namespace Negocio
     {
          int insertCliente(Cliente oCliente);
         DataTable ObtenerTabla(String nombreTabla, String query);
+
+        Boolean existe(String query);
     }
 }

@@ -26,76 +26,13 @@ namespace Neoris_Empresa_de_Viajes
             InitializeComponent();
         }
 
-
-        private void limpiarCampos() {
-
-            txtAltura.Text = "";
-            txtApellido.Text = "";
-            txtCalle.Text = "";
-            txtCuit.Text = "";
-            txtDni.Text = "";
-            txtNacionalidad.Text = "";
-            txtNombre.Text = "";
-            txtRazonSocial.Text = "";
-            txtTelefono.Text = "";
-        }
-
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            Cliente oCliente = new Cliente();
-
-            oCliente.Apellido = txtApellido.Text;
-            oCliente.Nombre = txtNombre.Text;
-            oCliente.Telefono = Convert.ToInt64(txtTelefono.Text);
-            oCliente.Nacionalidad = txtNacionalidad.Text;
-            oCliente.Calle = txtCalle.Text;
-            oCliente.NroCalle=Convert.ToInt32(txtAltura.Text);
-
-            Ciudad oCiudad = new Ciudad();
-            oCiudad.IdCiudad= (int)cbCiudad.SelectedValue;
-            oCiudad.IdProvincia= (int)cbProvincia.SelectedValue;
-            oCiudad.IdPais = (int)cbPais.SelectedValue;
-            oCliente.Ciudad=oCiudad;
-
-            if (txtCuit.Text == "") { 
-                oCliente.IdTipoCliente= 1;
-            }
-            if (txtCuit.Text != "")
-            {
-                oCliente.IdTipoCliente = 2;
-                oCliente.Cuit = Convert.ToInt64(txtCuit.Text);
-            }
-            oCliente.RazonSocial = txtRazonSocial.Text;
-            oCliente.Dni= Convert.ToInt64(txtDni.Text);
-
-            int filasAfectadas = cneg.insertCliente(oCliente);
-
-            if (filasAfectadas == 0)
-            {
-                lblMensaje.Text = "No se pudo agregar Cliente!" ;
-            }
-            else {
-
-                lblMensaje.Text = "Se agrego Cliente con exito!";
-                limpiarCampos();
-            }
-
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            limpiarCampos();
-        }
-
         private void frmClientes_Load(object sender, EventArgs e)
         {
             string queryPaises = "SELECT * FROM Paises";
             DataTable paises = cneg.ObtenerTabla("Paises", queryPaises);
-                cbPais.DataSource = paises;
-                cbPais.ValueMember = paises.Columns[0].ToString();
-                cbPais.DisplayMember = paises.Columns[1].ToString();
+            cbPais.DataSource = paises;
+            cbPais.ValueMember = paises.Columns[0].ToString();
+            cbPais.DisplayMember = paises.Columns[1].ToString();
 
             string queryCiudades = "SELECT * FROM Ciudades";
             DataTable ciudades = cneg.ObtenerTabla("Ciudades", queryCiudades);
@@ -111,9 +48,110 @@ namespace Neoris_Empresa_de_Viajes
 
         }
 
+        //Eventos
+        #region
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (!cneg.existe("SELECT *  FROM Clientes_X_TiposDocumento WHERE NroDocumento=" + Convert.ToInt64(txtDni.Text)))
+            {
+
+                Cliente oCliente = new Cliente();
+
+                oCliente.Apellido = txtApellido.Text;
+                oCliente.Nombre = txtNombre.Text;
+                oCliente.Telefono = Convert.ToInt64(txtTelefono.Text);
+                oCliente.Nacionalidad = txtNacionalidad.Text;
+                oCliente.Calle = txtCalle.Text;
+                oCliente.NroCalle = Convert.ToInt32(txtAltura.Text);
+
+                Ciudad oCiudad = new Ciudad();
+                oCiudad.IdCiudad = (int)cbCiudad.SelectedValue;
+                oCiudad.IdProvincia = (int)cbProvincia.SelectedValue;
+                oCiudad.IdPais = (int)cbPais.SelectedValue;
+                oCliente.Ciudad = oCiudad;
+
+                if (txtCuit.Text == "")
+                {
+                    oCliente.IdTipoCliente = 1;
+                }
+                if (txtCuit.Text != "")
+                {
+                    oCliente.IdTipoCliente = 2;
+                    oCliente.Cuit = Convert.ToInt64(txtCuit.Text);
+                }
+                oCliente.RazonSocial = txtRazonSocial.Text;
+                oCliente.Dni = Convert.ToInt64(txtDni.Text);
+
+
+
+                int filasAfectadas = cneg.insertCliente(oCliente);
+
+                if (filasAfectadas == 0)
+                {
+                    MessageBox.Show("No se pudo agregar Cliente");
+
+                }
+                else
+                {
+                    MessageBox.Show("Se agrego Cliente con exito");
+                    limpiarCampos();
+                }
+
+            }
+            else {
+                MessageBox.Show("El cliente con DNI "+txtDni.Text+" ya se encuentra registrado!");
+                limpiarCampos();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+        }
+
+   
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
+
+        private void soloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar)){
+                e.Handled = true;
+            }
+        }
+
+
+        private void soloLetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        #endregion
+
+        //Metodos
+        #region 
+        private void limpiarCampos()
+        {
+
+            txtAltura.Text = "";
+            txtApellido.Text = "";
+            txtCalle.Text = "";
+            txtCuit.Text = "";
+            txtDni.Text = "";
+            txtNacionalidad.Text = "";
+            txtNombre.Text = "";
+            txtRazonSocial.Text = "";
+            txtTelefono.Text = "";
+        }
+
+        #endregion
+
     }
 }
