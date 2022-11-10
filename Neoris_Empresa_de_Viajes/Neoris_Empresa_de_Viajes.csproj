@@ -150,5 +150,15 @@
   <ItemGroup>
     <None Include="Imagenes\login.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{54E8245E-A5E0-4E81-8FBD-D1E210BC46A8}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{B2067E43-D5AD-4AF9-A7C5-BA0A8A83424C}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

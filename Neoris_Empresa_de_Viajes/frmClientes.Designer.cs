@@ -364,6 +364,7 @@ namespace Neoris_Empresa_de_Viajes
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label1);
             this.Name = "frmClientes";
+            this.Load += new System.EventHandler(this.frmClientes_Load);
             this.gbxDatosCliente.ResumeLayout(false);
             this.gbxDatosCliente.PerformLayout();
             this.ResumeLayout(false);

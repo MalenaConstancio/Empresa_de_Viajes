@@ -2,24 +2,30 @@
 using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Negocio
 {
-    class ClienteNegocio : IClienteNegocio
+    public class ClienteNegocio : IClienteNegocio
     {
+        ClienteDao cdao = new ClienteDao();
         public int insertCliente(Cliente oCliente)
         {
             
-            ClienteDao cdao = new ClienteDao();
+            
             int filasAfectadas=cdao.insertCliente(oCliente);
 
             return filasAfectadas;
 
         }
 
-
+        public DataTable ObtenerTabla(string nombreTabla, string query)
+        {
+            DataTable tabla = cdao.ObtenerTabla(nombreTabla, query);
+            return tabla;
+        }
     }
 }

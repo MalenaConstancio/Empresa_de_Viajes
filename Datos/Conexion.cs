@@ -41,6 +41,30 @@ namespace Datos
             return filasAfectadas;
         }
 
+        private SqlDataAdapter ObtenerAdaptador(String consultaSql, SqlConnection cn)
+        {
+            SqlDataAdapter adaptador;
+            try
+            {
+                adaptador = new SqlDataAdapter(consultaSql, cn);
+                return adaptador;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public DataTable ObtenerTabla(String nombreTabla, String query)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection cnn = ObtenerConexion();
+            SqlDataAdapter adp = ObtenerAdaptador(query, cnn);
+            adp.Fill(ds, nombreTabla);
+            cnn.Close();
+            return ds.Tables[nombreTabla];
+        }
+
         public Boolean existe(String consulta)
         {
             Boolean estado = false;

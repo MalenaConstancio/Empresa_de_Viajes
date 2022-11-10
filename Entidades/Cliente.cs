@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Cliente
     {
-        private int idCiudad;
+        private Ciudad ciudad;
         private string calle;
         private int nroCalle;
         private long telefono;
@@ -20,7 +20,7 @@ namespace Entidades
         private long cuit;
         private string razonSocial;
 
-        public int IdCiudad { get; set; }
+        public Ciudad Ciudad { get; set; }
         public string Calle { get; set; }
         public int NroCalle { get; set; }
         public long Telefono { get; set; }
