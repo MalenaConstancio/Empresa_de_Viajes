@@ -17,10 +17,23 @@ namespace Neoris_Empresa_de_Viajes
             InitializeComponent();
         }
 
+
+        //Metodos
+        #region
+
+
+
+        #endregion
+
+        //Eventos
+        #region
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
+
+
+        #endregion
 
        
     }

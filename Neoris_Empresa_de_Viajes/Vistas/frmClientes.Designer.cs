@@ -117,7 +117,7 @@ namespace Neoris_Empresa_de_Viajes
             this.gbxDatosCliente.ForeColor = System.Drawing.Color.DimGray;
             this.gbxDatosCliente.Location = new System.Drawing.Point(12, 51);
             this.gbxDatosCliente.Name = "gbxDatosCliente";
-            this.gbxDatosCliente.Size = new System.Drawing.Size(549, 234);
+            this.gbxDatosCliente.Size = new System.Drawing.Size(549, 258);
             this.gbxDatosCliente.TabIndex = 13;
             this.gbxDatosCliente.TabStop = false;
             this.gbxDatosCliente.Text = "Datos del Cliente";
@@ -137,6 +137,8 @@ namespace Neoris_Empresa_de_Viajes
             this.cbPais.Name = "cbPais";
             this.cbPais.Size = new System.Drawing.Size(100, 24);
             this.cbPais.TabIndex = 26;
+   
+            this.cbPais.SelectionChangeCommitted += new System.EventHandler(this.cbPais_SelectionChangeCommitted);
             // 
             // label12
             // 
@@ -151,7 +153,7 @@ namespace Neoris_Empresa_de_Viajes
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.DarkGray;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(292, 206);
+            this.btnCancelar.Location = new System.Drawing.Point(466, 226);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(77, 23);
             this.btnCancelar.TabIndex = 24;
@@ -163,7 +165,7 @@ namespace Neoris_Empresa_de_Viajes
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(180, 206);
+            this.btnAgregar.Location = new System.Drawing.Point(380, 227);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(80, 23);
             this.btnAgregar.TabIndex = 23;
@@ -227,6 +229,8 @@ namespace Neoris_Empresa_de_Viajes
             this.cbProvincia.Name = "cbProvincia";
             this.cbProvincia.Size = new System.Drawing.Size(100, 24);
             this.cbProvincia.TabIndex = 16;
+           
+            this.cbProvincia.SelectionChangeCommitted += new System.EventHandler(this.cbProvincia_SelectionChangeCommitted);
             // 
             // label9
             // 

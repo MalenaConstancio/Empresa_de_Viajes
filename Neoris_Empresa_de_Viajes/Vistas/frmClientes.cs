@@ -30,21 +30,10 @@ namespace Neoris_Empresa_de_Viajes
         {
             string queryPaises = "SELECT * FROM Paises";
             DataTable paises = cneg.ObtenerTabla("Paises", queryPaises);
-            cbPais.DataSource = paises;
+            cbPais.DataSource = paises; 
             cbPais.ValueMember = paises.Columns[0].ToString();
             cbPais.DisplayMember = paises.Columns[1].ToString();
-
-            string queryCiudades = "SELECT * FROM Ciudades";
-            DataTable ciudades = cneg.ObtenerTabla("Ciudades", queryCiudades);
-            cbCiudad.DataSource = ciudades;
-            cbCiudad.ValueMember = ciudades.Columns[0].ToString();
-            cbCiudad.DisplayMember = ciudades.Columns[1].ToString();
-
-            string queryProvincias = "SELECT * FROM Provincias";
-            DataTable provincias = cneg.ObtenerTabla("Provincias", queryProvincias);
-            cbProvincia.DataSource = provincias;
-            cbProvincia.ValueMember = provincias.Columns[0].ToString();
-            cbProvincia.DisplayMember = provincias.Columns[1].ToString();
+            cbPais.SelectedText = "--Seleccionar--------";
 
         }
 
@@ -133,6 +122,31 @@ namespace Neoris_Empresa_de_Viajes
             }
         }
 
+
+
+
+        private void cbProvincia_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int idPais = (int)cbPais.SelectedValue;
+            int idProvincia = (int)cbProvincia.SelectedValue;
+            string queryCiudades = "SELECT * FROM Ciudades WHERE IdPais=" + idPais + " AND IdProvincia=" + idProvincia;
+            DataTable ciudades = cneg.ObtenerTabla("Ciudades", queryCiudades);
+            cbCiudad.DataSource = ciudades;
+            cbCiudad.ValueMember = ciudades.Columns[0].ToString();
+            cbCiudad.DisplayMember = ciudades.Columns[1].ToString();
+
+        }
+
+        private void cbPais_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int idPais = (int)cbPais.SelectedValue;
+            string queryProvincias = "SELECT * FROM Provincias WHERE IdPais=" + idPais;
+            DataTable provincias = cneg.ObtenerTabla("Provincias", queryProvincias);
+            cbProvincia.DataSource = provincias;
+            cbProvincia.ValueMember = provincias.Columns[0].ToString();
+            cbProvincia.DisplayMember = provincias.Columns[1].ToString();
+        }
+
         #endregion
 
         //Metodos
@@ -151,7 +165,11 @@ namespace Neoris_Empresa_de_Viajes
             txtTelefono.Text = "";
         }
 
+
+
+
         #endregion
 
+     
     }
 }
