@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="Implementaciones\ClienteDao.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Implementaciones\PaqueteDao.cs" />
     <Compile Include="Interfaces\IClienteDao.cs" />
+    <Compile Include="Interfaces\IPaqueteDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

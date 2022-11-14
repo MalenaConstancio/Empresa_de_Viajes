@@ -33,7 +33,6 @@ namespace Neoris_Empresa_de_Viajes
             cbPais.DataSource = paises; 
             cbPais.ValueMember = paises.Columns[0].ToString();
             cbPais.DisplayMember = paises.Columns[1].ToString();
-            cbPais.SelectedText = "--Seleccionar--------";
 
         }
 
@@ -147,6 +146,18 @@ namespace Neoris_Empresa_de_Viajes
             cbProvincia.DisplayMember = provincias.Columns[1].ToString();
         }
 
+        private void rbtPaticular_CheckedChanged(object sender, EventArgs e)
+        {
+            txtRazonSocial.Enabled = false;
+            txtCuit.Enabled = false;
+        }
+
+        private void rbtCorporativo_CheckedChanged(object sender, EventArgs e)
+        {
+            txtRazonSocial.Enabled = true;
+            txtCuit.Enabled = true;
+        }
+
         #endregion
 
         //Metodos
@@ -164,12 +175,8 @@ namespace Neoris_Empresa_de_Viajes
             txtRazonSocial.Text = "";
             txtTelefono.Text = "";
         }
-
-
-
-
         #endregion
 
-     
+    
     }
 }

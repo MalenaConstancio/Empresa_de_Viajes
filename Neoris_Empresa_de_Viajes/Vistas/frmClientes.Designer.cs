@@ -32,6 +32,9 @@ namespace Neoris_Empresa_de_Viajes
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.gbxDatosCliente = new System.Windows.Forms.GroupBox();
+            this.rbtCorporativo = new System.Windows.Forms.RadioButton();
+            this.rbtPaticular = new System.Windows.Forms.RadioButton();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.cbPais = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -87,6 +90,9 @@ namespace Neoris_Empresa_de_Viajes
             // 
             // gbxDatosCliente
             // 
+            this.gbxDatosCliente.Controls.Add(this.rbtCorporativo);
+            this.gbxDatosCliente.Controls.Add(this.rbtPaticular);
+            this.gbxDatosCliente.Controls.Add(this.label13);
             this.gbxDatosCliente.Controls.Add(this.txtNacionalidad);
             this.gbxDatosCliente.Controls.Add(this.cbPais);
             this.gbxDatosCliente.Controls.Add(this.label12);
@@ -117,33 +123,65 @@ namespace Neoris_Empresa_de_Viajes
             this.gbxDatosCliente.ForeColor = System.Drawing.Color.DimGray;
             this.gbxDatosCliente.Location = new System.Drawing.Point(12, 51);
             this.gbxDatosCliente.Name = "gbxDatosCliente";
-            this.gbxDatosCliente.Size = new System.Drawing.Size(549, 258);
+            this.gbxDatosCliente.Size = new System.Drawing.Size(549, 294);
             this.gbxDatosCliente.TabIndex = 13;
             this.gbxDatosCliente.TabStop = false;
             this.gbxDatosCliente.Text = "Datos del Cliente";
             // 
+            // rbtCorporativo
+            // 
+            this.rbtCorporativo.AutoSize = true;
+            this.rbtCorporativo.Location = new System.Drawing.Point(398, 36);
+            this.rbtCorporativo.Name = "rbtCorporativo";
+            this.rbtCorporativo.Size = new System.Drawing.Size(102, 20);
+            this.rbtCorporativo.TabIndex = 28;
+            this.rbtCorporativo.TabStop = true;
+            this.rbtCorporativo.Text = "Corporativo";
+            this.rbtCorporativo.UseVisualStyleBackColor = true;
+            this.rbtCorporativo.CheckedChanged += new System.EventHandler(this.rbtCorporativo_CheckedChanged);
+            // 
+            // rbtPaticular
+            // 
+            this.rbtPaticular.AutoSize = true;
+            this.rbtPaticular.Location = new System.Drawing.Point(296, 36);
+            this.rbtPaticular.Name = "rbtPaticular";
+            this.rbtPaticular.Size = new System.Drawing.Size(88, 20);
+            this.rbtPaticular.TabIndex = 27;
+            this.rbtPaticular.TabStop = true;
+            this.rbtPaticular.Text = "Particular";
+            this.rbtPaticular.UseVisualStyleBackColor = true;
+            this.rbtPaticular.CheckedChanged += new System.EventHandler(this.rbtPaticular_CheckedChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(56, 38);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(207, 16);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Seleccione el tipo de Cliente :";
+            // 
             // txtNacionalidad
             // 
-            this.txtNacionalidad.Location = new System.Drawing.Point(394, 177);
+            this.txtNacionalidad.Location = new System.Drawing.Point(400, 211);
             this.txtNacionalidad.Name = "txtNacionalidad";
             this.txtNacionalidad.Size = new System.Drawing.Size(100, 23);
-            this.txtNacionalidad.TabIndex = 27;
+            this.txtNacionalidad.TabIndex = 12;
             this.txtNacionalidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloLetras_KeyPress);
             // 
             // cbPais
             // 
             this.cbPais.FormattingEnabled = true;
-            this.cbPais.Location = new System.Drawing.Point(394, 29);
+            this.cbPais.Location = new System.Drawing.Point(400, 63);
             this.cbPais.Name = "cbPais";
             this.cbPais.Size = new System.Drawing.Size(100, 24);
-            this.cbPais.TabIndex = 26;
-   
+            this.cbPais.TabIndex = 7;
             this.cbPais.SelectionChangeCommitted += new System.EventHandler(this.cbPais_SelectionChangeCommitted);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(289, 32);
+            this.label12.Location = new System.Drawing.Point(295, 66);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 16);
             this.label12.TabIndex = 25;
@@ -152,8 +190,9 @@ namespace Neoris_Empresa_de_Viajes
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.DarkGray;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(466, 226);
+            this.btnCancelar.Location = new System.Drawing.Point(466, 263);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(77, 23);
             this.btnCancelar.TabIndex = 24;
@@ -165,7 +204,7 @@ namespace Neoris_Empresa_de_Viajes
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(380, 227);
+            this.btnAgregar.Location = new System.Drawing.Point(380, 264);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(80, 23);
             this.btnAgregar.TabIndex = 23;
@@ -175,31 +214,31 @@ namespace Neoris_Empresa_de_Viajes
             // 
             // txtCuit
             // 
-            this.txtCuit.Location = new System.Drawing.Point(160, 32);
+            this.txtCuit.Location = new System.Drawing.Point(166, 66);
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.Size = new System.Drawing.Size(100, 23);
-            this.txtCuit.TabIndex = 22;
+            this.txtCuit.TabIndex = 1;
             this.txtCuit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumeros_KeyPress);
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(394, 148);
+            this.txtAltura.Location = new System.Drawing.Point(400, 182);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(100, 23);
-            this.txtAltura.TabIndex = 21;
+            this.txtAltura.TabIndex = 11;
             this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumeros_KeyPress);
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(394, 119);
+            this.txtCalle.Location = new System.Drawing.Point(400, 153);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(100, 23);
-            this.txtCalle.TabIndex = 20;
+            this.txtCalle.TabIndex = 10;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(287, 151);
+            this.label11.Location = new System.Drawing.Point(293, 185);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 16);
             this.label11.TabIndex = 19;
@@ -208,7 +247,7 @@ namespace Neoris_Empresa_de_Viajes
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(287, 122);
+            this.label10.Location = new System.Drawing.Point(293, 156);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 16);
             this.label10.TabIndex = 18;
@@ -217,25 +256,24 @@ namespace Neoris_Empresa_de_Viajes
             // cbCiudad
             // 
             this.cbCiudad.FormattingEnabled = true;
-            this.cbCiudad.Location = new System.Drawing.Point(394, 89);
+            this.cbCiudad.Location = new System.Drawing.Point(400, 123);
             this.cbCiudad.Name = "cbCiudad";
             this.cbCiudad.Size = new System.Drawing.Size(100, 24);
-            this.cbCiudad.TabIndex = 17;
+            this.cbCiudad.TabIndex = 9;
             // 
             // cbProvincia
             // 
             this.cbProvincia.FormattingEnabled = true;
-            this.cbProvincia.Location = new System.Drawing.Point(394, 59);
+            this.cbProvincia.Location = new System.Drawing.Point(400, 93);
             this.cbProvincia.Name = "cbProvincia";
             this.cbProvincia.Size = new System.Drawing.Size(100, 24);
-            this.cbProvincia.TabIndex = 16;
-           
+            this.cbProvincia.TabIndex = 8;
             this.cbProvincia.SelectionChangeCommitted += new System.EventHandler(this.cbProvincia_SelectionChangeCommitted);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(287, 92);
+            this.label9.Location = new System.Drawing.Point(293, 126);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 16);
             this.label9.TabIndex = 15;
@@ -244,7 +282,7 @@ namespace Neoris_Empresa_de_Viajes
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(287, 62);
+            this.label8.Location = new System.Drawing.Point(293, 96);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 16);
             this.label8.TabIndex = 14;
@@ -252,16 +290,16 @@ namespace Neoris_Empresa_de_Viajes
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(160, 177);
+            this.txtTelefono.Location = new System.Drawing.Point(166, 211);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 23);
-            this.txtTelefono.TabIndex = 13;
+            this.txtTelefono.TabIndex = 6;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumeros_KeyPress);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(49, 180);
+            this.label7.Location = new System.Drawing.Point(55, 214);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 16);
             this.label7.TabIndex = 12;
@@ -270,7 +308,7 @@ namespace Neoris_Empresa_de_Viajes
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(287, 180);
+            this.label6.Location = new System.Drawing.Point(293, 214);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 16);
             this.label6.TabIndex = 10;
@@ -278,16 +316,16 @@ namespace Neoris_Empresa_de_Viajes
             // 
             // txtRazonSocial
             // 
-            this.txtRazonSocial.Location = new System.Drawing.Point(160, 148);
+            this.txtRazonSocial.Location = new System.Drawing.Point(166, 182);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(100, 23);
-            this.txtRazonSocial.TabIndex = 9;
+            this.txtRazonSocial.TabIndex = 5;
             this.txtRazonSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloLetras_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 151);
+            this.label5.Location = new System.Drawing.Point(55, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 16);
             this.label5.TabIndex = 8;
@@ -295,16 +333,16 @@ namespace Neoris_Empresa_de_Viajes
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(160, 61);
+            this.txtDni.Location = new System.Drawing.Point(166, 95);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 23);
-            this.txtDni.TabIndex = 7;
+            this.txtDni.TabIndex = 2;
             this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNumeros_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 64);
+            this.label4.Location = new System.Drawing.Point(56, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 6;
@@ -313,7 +351,7 @@ namespace Neoris_Empresa_de_Viajes
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 35);
+            this.label3.Location = new System.Drawing.Point(56, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 5;
@@ -321,7 +359,7 @@ namespace Neoris_Empresa_de_Viajes
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(160, 119);
+            this.txtApellido.Location = new System.Drawing.Point(166, 153);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 23);
             this.txtApellido.TabIndex = 4;
@@ -330,7 +368,7 @@ namespace Neoris_Empresa_de_Viajes
             // labela
             // 
             this.labela.AutoSize = true;
-            this.labela.Location = new System.Drawing.Point(49, 122);
+            this.labela.Location = new System.Drawing.Point(55, 156);
             this.labela.Name = "labela";
             this.labela.Size = new System.Drawing.Size(69, 16);
             this.labela.TabIndex = 3;
@@ -338,16 +376,16 @@ namespace Neoris_Empresa_de_Viajes
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(160, 90);
+            this.txtNombre.Location = new System.Drawing.Point(166, 124);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 23);
-            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TabIndex = 3;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloLetras_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 93);
+            this.label2.Location = new System.Drawing.Point(55, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 0;
@@ -355,9 +393,11 @@ namespace Neoris_Empresa_de_Viajes
             // 
             // frmClientes
             // 
+            this.AcceptButton = this.btnAgregar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(573, 504);
             this.ControlBox = false;
             this.Controls.Add(this.gbxDatosCliente);
@@ -402,5 +442,8 @@ namespace Neoris_Empresa_de_Viajes
         private System.Windows.Forms.ComboBox cbPais;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtNacionalidad;
+        private System.Windows.Forms.RadioButton rbtCorporativo;
+        private System.Windows.Forms.RadioButton rbtPaticular;
+        private System.Windows.Forms.Label label13;
     }
 }

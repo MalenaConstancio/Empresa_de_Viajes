@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementaciones\ClienteNegocio.cs" />
+    <Compile Include="Implementaciones\PaqueteNegocio.cs" />
     <Compile Include="Interfaces\IClienteNegocio.cs" />
+    <Compile Include="Interfaces\IPaqueteNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

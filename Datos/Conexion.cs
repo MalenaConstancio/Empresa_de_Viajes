@@ -13,7 +13,7 @@ namespace Datos
         private string rutabd_Empresa_de_Viajes = @"Data Source=DESKTOP-69H27BO\SQLEXPRESS;Initial Catalog=bd_Empresa_de_Viajes;Integrated Security=True";
 
 
-        private SqlConnection ObtenerConexion()
+        public SqlConnection ObtenerConexion()
         {
             SqlConnection cn = new SqlConnection(rutabd_Empresa_de_Viajes);
             try
